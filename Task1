@@ -1,0 +1,80 @@
+a = int(input('A ededini daxil edin: '))
+b = int(input('B ededini daxil edin: '))
+c = int(input('C ededini daxil edin: '))
+if a > 0:
+  if b < 0 or c < 0:
+      print('YES')
+    else:
+        print('NO')
+elif b > 0:
+    if a < 0 or c < 0:
+        print('YES')
+    else:
+        print('NO')
+elif c > 0:
+    if a < 0 or b < 0:
+        print('YES')
+    else:
+        print('NO')
+else:
+    print('NO')
+
+N = input("Ucreqemli ededi daxil edin: ")
+if len(set(N)) == 3:
+    print("YES")
+else:
+    print("NO")
+
+a = int(input("Birinci ededi daxil edin: "))
+b = int(input("İkinci ededi daxil edin: "))
+if a > b:
+    count = a - b - 1
+    if count < 0:
+        count = 0
+elif b > a:
+    count = b - a - 1
+    if count < 0:
+        count = 0
+else:
+    count = 0
+print(count)
+
+a = int(input("Birinci ededi daxil edin: "))
+b = int(input("İkinci ededi daxil edin: "))
+c = int(input("Üçüncü ededi daxil edin: "))
+d = int(input("Dördüncü ededi daxil edin: "))
+print(max(a, b, c, d))
+
+print("Hello World!")
+
+a = int(input("a-nin uzunluğunu daxil edin: "))
+b = int(input("b-nin uzunluğunu daxil edin: "))
+c = int(input("c-nin uzunluğunu daxil edin: "))
+Hecm = a * b * c
+Seth = 2 * (a*b + a*c + b*c)
+print("Səth sahəsi:", Seth)
+print("Həcmi:", Hecm)
+
+def butun(n):
+    if n == 0:
+        return 0
+    else:
+        return n + butun(n-1)
+def cut(n):
+    if n <= 0:
+        return 0
+    if n % 2 != 0:
+        return cut(n-1)
+    else:
+        return n + cut(n-2)
+def tek(n):
+    if n <= 0:
+        return 0
+    if n % 2 == 0:
+        return tek(n-1)
+    else:
+        return n + tek(n-2)
+n = 100
+print("0-dan 100-e qeder butun ededlerin cemi:", butun(n))
+print("0-dan 100-e qeder cut ededlerin cemi:", cut(n))
+print("0-dan 100-e qeder tek ededlerin cemi:", tek(n-1)) 
